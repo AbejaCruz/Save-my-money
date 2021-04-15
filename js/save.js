@@ -9,7 +9,6 @@ function onlyOne(checkbox) {
 
     if (item == checkbox) form.boton.disabled = false
     if (document.getElementById('cbox1').checked == false && document.getElementById('cbox2').checked == false) {
-      console.log("hola")
       form.boton.disabled = true
     }
   })
@@ -51,8 +50,7 @@ form.addEventListener("submit", async (e) => {
       alert('Ingresos Guardados');
       await saveRevenue(value.value, type.value, subtype.value, date.value, info.value)
     }
-    document.getElementById('cbox1').checked == false
-    document.getElementById('cbox2').checked == false
+    
     form.reset()
     form.boton.disabled = true
     value.focus()
