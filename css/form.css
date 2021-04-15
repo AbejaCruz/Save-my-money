@@ -99,6 +99,9 @@ main{
     font-weight: bold;
     margin: 10px 0px;
 }
+.button:disabled{
+    background-color: rgba(209, 190, 190, 0.788);
+}
 /* ------------------------- */
 /* footer */
 /* ------------------------- */

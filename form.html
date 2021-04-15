@@ -16,17 +16,17 @@
     <main>
         <section class="login">
             <section class="login__container">
-                <label >
-                    <input type="checkbox" name="" id="cbox1" value="checkbox">Gastos
-                    <input type="checkbox" name="" id="cbox1" value="checkbox">Ingresos
+                <label>
+                    <input type="checkbox" name="check" id="cbox1" value="checkbox" onclick="onlyOne(this)">Gastos
+                    <input type="checkbox" name="check" id="cbox2" value="checkbox" onclick="onlyOne(this)">Ingresos
                 </label>
-                <form  class="login__container--form">
-                    <input type="number" class="input" placeholder="$ Valor">
-                    <input type="text" class="input" placeholder="Tipo">
-                    <input type="text" class="input" placeholder="Sub. Tipo">
-                    <input type="date" class="input" placeholder="Fecha">
-                    <input type="text" class="input" placeholder="Detalles">
-                    <button class="button">Guardar</button>  
+                <form  class="login__container--form" id="form">
+                    <input type="number" id="value" class="input" placeholder="$ Valor">
+                    <input type="text" id="type" class="input" placeholder="Tipo">
+                    <input type="text" id="subtype" class="input" placeholder="Sub. Tipo">
+                    <input type="date" id="date" class="input" placeholder="Fecha">
+                    <input type="text" id="info" class="input" placeholder="Detalles">
+                    <button class="button" name="boton" disabled>Guardar</button>  
                 </form>
                 <!-- <section class="login__container--social-media">
                      <div><img src="../img/google-icon.png" alt="Google">Inicia session con google</div>
@@ -40,7 +40,32 @@
     <footer>
         <p>design by Team7</p>
     </footer>
-    
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+ 
+ 
+     <script>
+         // Your web app's Firebase configuration
+         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+         var firebaseConfig = {
+             apiKey: "AIzaSyAvD6mXVL2D5Ad-U29xJ7tLjUn9_S91oqc",
+             authDomain: "save-my-money-6a6f8.firebaseapp.com",
+             projectId: "save-my-money-6a6f8",
+             storageBucket: "save-my-money-6a6f8.appspot.com",
+             messagingSenderId: "743484798052",
+             appId: "1:743484798052:web:43586e4f63884e473a9b71",
+             measurementId: "G-PBGNPDV32X"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+     </script>
+     <script src="./js/save.js"></script>
     
 </body>
 </html>
