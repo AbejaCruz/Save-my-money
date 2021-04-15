@@ -1,6 +1,8 @@
 const db = firebase.firestore();
-
+let totalRevenue 
 const form = document.getElementById("form");
+
+
 
 function onlyOne(checkbox) {
   var checkboxes = document.getElementsByName('check')
@@ -32,6 +34,7 @@ const saveRevenue = (value, type, subtype, date, info) =>
     info,
   });
 
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -58,3 +61,4 @@ form.addEventListener("submit", async (e) => {
     console.log(error);
   }
 })
+
