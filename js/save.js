@@ -48,6 +48,7 @@ form.addEventListener("submit", async (e) => {
     if (document.getElementById('cbox1').checked) {
       alert('Gastos Guardados');
       await saveExpenses(value.value, type.value, subtype.value, date.value, info.value)
+      
     }
     if (document.getElementById('cbox2').checked) {
       alert('Ingresos Guardados');

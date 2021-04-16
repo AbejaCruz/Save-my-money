@@ -1,18 +1,35 @@
 const db = firebase.firestore();
-let totalRevenue 
 
-const getRevenue = () => db.collection("revenue").get();
-
-const onGetRevenue = (callback) => db.collection("revenue").onSnapshot(callback);
 
 window.addEventListener("DOMContentLoaded", async (e) => {
-    onGetRevenue((querySnapshot) => {
-      let arrayValue =[]
-      querySnapshot.forEach((doc) => {
-        arrayValue.push( parseInt(doc.data().value))
-      })
-      totalRevenue = arrayValue.reduce((a, b) => a + b, 0);
-      document.getElementById('totalRevenue').innerHTML = `${totalRevenue}`
-   
+    let expenses = 0, revenues = 0
+    const updateTotal = () => {
+        console.log()
+        document.getElementById('totalRevenue').innerHTML = `${revenues-expenses}`
+    }
+    getTotalFor('expenses', (total) =>{
+        console.log('expenses:'+total)
+        expenses=total
+        updateTotal()
+
     })
-  })
+    getTotalFor('revenue', (total) =>{
+        console.log('revenues:'+total)
+        revenues=total
+        updateTotal()
+    })
+ })
+const getTotalFor =  (collection, callback) => {
+  
+   db.collection(collection).onSnapshot(
+       (querySnapshot) => {
+            let arrayValues = []
+            querySnapshot.forEach((doc) => {
+                arrayValues.push(parseInt(doc.data().value))
+            })
+           const subTotal = arrayValues.reduce((a, b) => a + b, 0);
+           callback(subTotal)
+        }
+    )
+   
+}
