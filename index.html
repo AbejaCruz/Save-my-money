@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="./css/styles.css">
     <title>Save My Money</title>
 </head>
+
 <body>
     <header class="head">
-        <a href="./index.html"><h1>SaveMyMoney</h1></a>
+        <a href="./index.html">
+            <h1 class="logo">SaveMyMoney</h1>
+        </a>
         <div class="header__menu">
             <div class="header__menu--perfil">
                 <img src="./assets/img/user.png" alt="">
@@ -24,63 +28,65 @@
     </header>
 
     <main>
-        <div class="container-value">
-             <h1><span> $  </span> <span id="totalRevenue">valor</span></h1>
-        </div>
+        <div class="container">
 
-        <div class="content">
-            <div class="content__top">
-                <div class="box">
-                 <a href="./form.html"><img src="./assets/img/bill.png"/></a>   
-                    <h2> Cargar</h2>
-                </div>
-                <div class="box">
-                    <img src="./assets/img/bill.png"/>
-                    <h2>Detalles</h2>
-                </div>
+            <div class=" container-value">
+                <h1><span> $ </span> <span id="totalRevenue">valor</span></h1>
             </div>
-            <div class="content__botton">
-                <dir class="box">
-                    <img src="./assets/img/bill.png"/>
-                    <h2>ControlGastos</h2>
-                </dir>
-                <div class="box">
-                    <img src="./assets/img/bill.png"/>
-                    <h2>Estadisticas</h2>
-                </div>
+
+            <div class="box box1">
+                <a href="./form.html"><img src="./assets/img/bill.png" /></a>
+                <h1> <a href="./form.html"> Cargar</a> </h1>
             </div>
+
+            <div class="box box2">
+                <img src="./assets/img/bill.png" />
+                <h1> <a href="./form.html"> Detalles</a> </h1>
+            </div>
+
+            <div class="box box3">
+                <img src="./assets/img/bill.png" />
+                <h1> <a href="./form.html"> ControlGastos</a> </h1>
+            </div>
+
+            <div class="box box4">
+                <img src="./assets/img/bill.png" />
+                <h1> <a href="./form.html"> Estadisticas</a> </h1>
+            </div>
+
         </div>
     </main>
 
     <footer>
         <p>design by Team7</p>
     </footer>
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
 
-     <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
- 
- 
-     <script>
-         // Your web app's Firebase configuration
-         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-         var firebaseConfig = {
-             apiKey: "AIzaSyAvD6mXVL2D5Ad-U29xJ7tLjUn9_S91oqc",
-             authDomain: "save-my-money-6a6f8.firebaseapp.com",
-             projectId: "save-my-money-6a6f8",
-             storageBucket: "save-my-money-6a6f8.appspot.com",
-             messagingSenderId: "743484798052",
-             appId: "1:743484798052:web:43586e4f63884e473a9b71",
-             measurementId: "G-PBGNPDV32X"
-         };
-         // Initialize Firebase
-         firebase.initializeApp(firebaseConfig);
-         firebase.analytics();
-     </script>
-     <script src="./js/revenue.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAvD6mXVL2D5Ad-U29xJ7tLjUn9_S91oqc",
+            authDomain: "save-my-money-6a6f8.firebaseapp.com",
+            projectId: "save-my-money-6a6f8",
+            storageBucket: "save-my-money-6a6f8.appspot.com",
+            messagingSenderId: "743484798052",
+            appId: "1:743484798052:web:43586e4f63884e473a9b71",
+            measurementId: "G-PBGNPDV32X"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="./js/revenue.js"></script>
+
 </body>
+
 </html>
