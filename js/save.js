@@ -2,8 +2,6 @@ const db = firebase.firestore();
 let totalRevenue 
 const form = document.getElementById("form");
 
-
-
 function onlyOne(checkbox) {
   var checkboxes = document.getElementsByName('check')
   checkboxes.forEach((item) => {

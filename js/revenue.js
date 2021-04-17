@@ -1,6 +1,5 @@
 const db = firebase.firestore();
 
-
 window.addEventListener("DOMContentLoaded", async (e) => {
     let expenses = 0, revenues = 0
     const updateTotal = () => {
