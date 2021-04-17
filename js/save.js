@@ -2,8 +2,6 @@ const db = firebase.firestore();
 let totalRevenue 
 const form = document.getElementById("form");
 
-
-
 function onlyOne(checkbox) {
   var checkboxes = document.getElementsByName('check')
   checkboxes.forEach((item) => {
@@ -48,6 +46,7 @@ form.addEventListener("submit", async (e) => {
     if (document.getElementById('cbox1').checked) {
       alert('Gastos Guardados');
       await saveExpenses(value.value, type.value, subtype.value, date.value, info.value)
+      
     }
     if (document.getElementById('cbox2').checked) {
       alert('Ingresos Guardados');
@@ -61,4 +60,5 @@ form.addEventListener("submit", async (e) => {
     console.log(error);
   }
 })
+
 
