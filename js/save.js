@@ -1,6 +1,6 @@
-const db = firebase.firestore();
+const db = firebase.firestore()
 let totalRevenue 
-const form = document.getElementById("form");
+const form = document.getElementById("form")
 
 function onlyOne(checkbox) {
   var checkboxes = document.getElementsByName('check')
@@ -14,50 +14,45 @@ function onlyOne(checkbox) {
   })
 }
 
-const saveExpenses = (value, type, subtype, date, info) =>
+const saveExpenses = (value, type, date) =>
   db.collection("expenses").doc().set({
     value,
     type,
-    subtype,
     date,
-    info,
-  });
+    })
 
-const saveRevenue = (value, type, subtype, date, info) =>
-  db.collection("revenue").doc().set({
+const saveRevenue = (value, type, date) =>
+  db.collection("revenues").doc().set({
     value,
     type,
-    subtype,
     date,
-    info,
-  });
+ 
+  })
 
 
 form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  e.preventDefault()
 
   const value = form['value']
   const type = form['type']
-  const subtype = form['subtype']
   const date = form['date']
-  const info = form['info']
+ 
 
   try {
     if (document.getElementById('cbox1').checked) {
-      alert('Gastos Guardados');
-      await saveExpenses(value.value, type.value, subtype.value, date.value, info.value)
+      alert('Gastos Guardados')
+      await saveExpenses(value.value, type.value, date.value)
       
     }
     if (document.getElementById('cbox2').checked) {
-      alert('Ingresos Guardados');
-      await saveRevenue(value.value, type.value, subtype.value, date.value, info.value)
+      alert('Ingresos Guardados')
+      await saveRevenue(value.value, type.value, date.value)
     }
-    
     form.reset()
     form.boton.disabled = true
     value.focus()
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
 })
 
