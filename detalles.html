@@ -34,13 +34,16 @@
             </div>
 
             <div class="c atualizar">
-                <div id="taskContainer">
+                <div id="expenses">
+                  
+                </div>
+                <div id="revenues">
                   
                 </div>
 
                 <form action="" class="form" id="form">
                     <div>
-                      <input type="number" id="form-valor" placeholder="valor">
+                      <input type="number" id="form-value" placeholder="valor">
                     </div>
                     <div>
                       <input type="text" id="form-name" placeholder="name">
@@ -50,7 +53,7 @@
                        <input type="date" id="form-date" placeholder="date">
                     </div>
                       <button type="submit">
-                          save
+                          Update
                       </button >
                     </div>
                 </form>
@@ -62,22 +65,32 @@
     <footer>
         <p>design by Team7</p>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyAnUIMo4xvgEm955cBuHfxoAYYrdaLLCPc",
-        authDomain: "prueba-2e951.firebaseapp.com",
-        projectId: "prueba-2e951",
-        storageBucket: "prueba-2e951.appspot.com",
-        messagingSenderId: "516703590216",
-        appId: "1:516703590216:web:c5c000dbc1d964c76ac57d"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="./pruebas.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  
+  
+      <script>
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          var firebaseConfig = {
+              apiKey: "AIzaSyAvD6mXVL2D5Ad-U29xJ7tLjUn9_S91oqc",
+              authDomain: "save-my-money-6a6f8.firebaseapp.com",
+              projectId: "save-my-money-6a6f8",
+              storageBucket: "save-my-money-6a6f8.appspot.com",
+              messagingSenderId: "743484798052",
+              appId: "1:743484798052:web:43586e4f63884e473a9b71",
+              measurementId: "G-PBGNPDV32X"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+      </script>
+    <script src="./js/read.js"></script>
 
 </body>
 
