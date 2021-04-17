@@ -44,9 +44,6 @@ a{
     font-size: 2rem; 
 }
 
-@media (min-width: 600px){
-    
-}
 .header__menu {
     text-align: right;
 }
@@ -132,7 +129,11 @@ footer{
     padding: 2rem;
 }
 
-@media (min-width: 600px){  /* renderizado para tables */
+/* ------------------------- */
+/* Pantalla table */
+/* ------------------------- */
+
+@media (min-width: 600px){  
     
     .box{
         width: 40%;
@@ -145,11 +146,15 @@ footer{
         font-size: 3rem; 
     }
 
-@media (min-width: 800px){  /* vista para computadores */
+    /* ------------------------- */
+/* Pantalla pc */
+/* ------------------------- */
+
+@media (min-width: 800px){  
 
 .box3, 
 .box4 {
-    display: block;  /* desaparecer control gastos estadisticas para vista celular */
+    display: block;  
 }
 .logo {
     font-size: 4rem; 

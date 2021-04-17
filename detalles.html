@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/detalles.css">
+    <title>Save My Money</title>
+</head>
+
+<body>
+    <header class="head">
+        <a href="./index.html">
+            <h1 class="logo">SaveMyMoney</h1>
+        </a>
+        <div class="header__menu">
+            <div class="header__menu--perfil">
+                <img src="./assets/img/user.png" alt="">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="./inicio-seccion.html">Cuenta</a></li>
+                <li><a href="/">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class=" container">
+            <div class="date">
+                <input type="month" class="input" placeholder="mes">
+            </div>
+
+            <div class="c atualizar">
+                <div id="taskContainer">
+                  
+                </div>
+
+                <form action="" class="form" id="form">
+                    <div>
+                      <input type="number" id="form-valor" placeholder="valor">
+                    </div>
+                    <div>
+                      <input type="text" id="form-name" placeholder="name">
+                    </div>
+                    <div>
+                    <div>
+                       <input type="date" id="form-date" placeholder="date">
+                    </div>
+                      <button type="submit">
+                          save
+                      </button >
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>design by Team7</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAnUIMo4xvgEm955cBuHfxoAYYrdaLLCPc",
+        authDomain: "prueba-2e951.firebaseapp.com",
+        projectId: "prueba-2e951",
+        storageBucket: "prueba-2e951.appspot.com",
+        messagingSenderId: "516703590216",
+        appId: "1:516703590216:web:c5c000dbc1d964c76ac57d"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./pruebas.js"></script>
+
+</body>
+
+</html>
