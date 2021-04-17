@@ -14,20 +14,57 @@ body{
 main{
     color:#007cba ;
 }
+
 /* ------------------------- */
 /* Encabezado */
 /* ------------------------- */
 .head{
-    background-color: rgba(255, 255, 255, 0.1);
     color: white;
-    height: 8rem;
+    height: 120px;
+    display: flex;
     align-items: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    
 }
 .head a{
     color: white;
     text-decoration: none;
+    min-width: 100px;
+
+}
+
+.logo {
+    font-size: 2rem; 
+}
+
+.header__menu {
+    text-align: right;
+}
+.header__menu--perfil {
+    display: flex;
+    align-items: center;
+}
+.header__menu ul {
+    display: none;
+    list-style: none;
+}
+.header__menu:hover ul,
+ul:hover {
+    display: block;
+}
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+.header__menu li a:hover {
+    text-decoration: underline;
 }
 
 /* ------------------------- */
@@ -48,9 +85,9 @@ main{
     border-radius: 40px;
     color: white;
     flex-direction: column;
-  justify-content: space-around;
+    justify-content: space-around;
     padding: 3rem;
-    min-height: 600px;
+    min-height: 400px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -62,12 +99,11 @@ main{
     flex-direction: column;
 }
 .login__container--form label{
-    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.login__container--register{
-    font-size: 14px;
-}
 
 .input{
     background-color: transparent;
@@ -112,4 +148,49 @@ footer{
     background-color: rgba(255, 255, 255, 0.1);
     margin-top: 2rem;
     padding: 2rem;
+}
+
+/* ------------------------- */
+/* Pantalla table */
+/* ------------------------- */
+
+@media (min-width: 600px){  
+    
+    .logo {
+        font-size: 3rem; 
+    }
+    .login{
+        font-size: 2.6rem;
+    }
+    .login__container{
+        padding: 3rem;
+        min-height: 450px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+    .input{
+        border-left: 0px;
+        border-top: 0px;
+        border-right: 0px;
+        border-bottom: 2px solid white;
+        font-size: 2.6rem;
+        font-family: 'Open Sans' sans-serif;
+        margin-bottom: 20px;
+        padding: 0px 20px;
+        outline: none;
+        height: 50px;
+    }
+    
+    
+
+    /* ------------------------- */
+/* Pantalla pc */
+/* ------------------------- */
+
+@media (min-width: 800px){  
+
+.logo {
+    font-size: 4rem; 
+}
 }
