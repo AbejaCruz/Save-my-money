@@ -2,7 +2,7 @@
 
 Application that will allow managing the personal expenses of a user, carrying, the application will have two interfaces: one for income and the other with expenses.
 
-# technology
+# Technology
 
 HTML, Js Vanilla y CSS Puro.
 
@@ -19,6 +19,6 @@ the project was developed out by:
  @AbejaCruz - Backend
  @tanamix22 - Frontend
 
- # how can you contribute?
+ # How can you contribute?
  
 you can fork the project and add new features, such as statistics functionality.
