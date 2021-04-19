@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 html{
     font-size: 62.5%;
@@ -11,6 +12,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     
 }
+
 main{
     color:#007cba ;
 }
@@ -84,57 +86,18 @@ ul:hover {
 .header__menu li a:hover {
     text-decoration: underline;
 }
+
 /* ------------------------- */
-/* Contenedor Principal */
+/* chart*/
 /* ------------------------- */
-.container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin: 0 auto;
-    height: 100vh;
-    padding: 1rem;
-}
-.box{
-    width: 100%;
-    min-width: 150px;
-    height:30vh;
-    padding: 1rem;
-    text-align: center;
-    
-}
-.container-value{
-    width: 100%;
-    min-width: 150px;
-    display: flex;
-    height: calc(10vh - 1rem);
-    min-height: 75px;
-}
-.container-value h1{
-    border: 0.3rem solid #007cba ;
-    border-radius: 2rem;
-    padding-left: 4rem;
-    padding-top: 1.5rem;
-    margin: auto auto;
-    width: 98%;
-    max-width: 250px;
-    min-height: 70px;
+
+canvas{
+    border: 0.3rem solid black;
 }
 
-.box img{
-    max-width: 100%;
-    max-height: 85%;
-    
-}
-.box h2{
-    word-wrap: break-word;
-}
-
-
-.box4 {
-    display: none;  /* desaparecer control gastos estadisticas para vista celular */
-}
+/* ------------------------- */
+/* footer */
+/* ------------------------- */
 footer{
     text-align: center;
     color: white;
@@ -143,6 +106,7 @@ footer{
     padding: 2rem;
 }
 
+
 /* ------------------------- */
 /* Pantalla table */
 /* ------------------------- */
@@ -150,18 +114,11 @@ footer{
 @media (min-width: 600px){  
     
     .box{
-        width: 40%;
-        height:30vh;
-        padding: 1rem;
-        text-align: center;
+      
         
     }
-
     .logo {
         font-size: 3rem; 
-    }
-    .box4 {
-        display: block;  /* desaparecer control gastos estadisticas para vista celular */
     }
 
     /* ------------------------- */
@@ -170,12 +127,8 @@ footer{
 
 @media (min-width: 800px){  
 
-.box3, 
-.box4 {
-    display: block;  
-}
+
 .logo {
     font-size: 4rem; 
 }
 }
-

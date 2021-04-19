@@ -14,11 +14,7 @@ body{
 main{
     color:#007cba ;
 }
-a{
-    text-decoration: none; 
-    color:#007cba ;
-    padding: 1rem;
-}
+
 
 /* ------------------------- */
 /* Encabezado */
@@ -39,6 +35,19 @@ a{
     min-width: 100px;
 
 }
+.home{
+    display: none;
+}
+.head__home img{
+    width: 50px;
+    margin-right: 20px;
+}
+@media (min-width: 350px){
+    .home{
+        display: flex;
+    }
+}
+
 
 .logo {
     font-size: 2rem; 
@@ -80,11 +89,10 @@ ul:hover {
     margin: 0 auto;
     height: 85vh;
     padding: 1rem;
-    border: 0.2rem solid black;
 }
 .c{
     height: 70vh;
-    border: 0.2rem solid red;
+    
     width: 100%;
     
 }
@@ -93,18 +101,124 @@ ul:hover {
     height: 30px;
     margin: 10px auto;
     width: 100%;
-    border: 0.2rem solid black;
+}
+.date input{
+    margin: 0 auto;
 }
 .form{
     width: 100%;
 }
+/* ------------------------- */
+/* lista insertada */
+/* ------------------------- */
+.result{
+    background-color:#007cba;
+    border-radius: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+}
 
-footer{
-    text-align: center;
+.botones{
+    width: 25%;
+    max-width: 100px;
+    
+}
+.botones button{
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 25px;
     color: white;
-    background-color: #007cba;
-    margin-top: 2rem;
+    font-size: 16px;
+    font-family: 'Open Sans' sans-serif;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+button:disabled{
+    background-color: rgba(209, 190, 190, 0.788);
+}
+.top{
+    width: 90%;
+    margin: 0 auto;
+}
+.top h2{
+    width: 80%;
+    margin: 0 auto;
+    color: red;
+    
+}
+.ingresos h2{
+    color:#00FF00
+}
+.up{
+    width: 80%;
+    margin: 0 auto;
+    justify-content:space-between
+    margin: 0 auto;
+}
+
+.result__tablero{
+    width: 75%;
+    color: white;
+}
+
+.box{
+    margin: 0.5rem auto; 
+    width:100%;
+    max-width: 300px;
+}
+.box input{
+    color: white;
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    border-radius: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    color:  #007cba;
+    width: 100%;
+    font-size: 1.6rem;
+    min-width: 100px;
+    max-width: 300px;
+    outline: none;
+    height: 50px;
+}
+::placeholder{
+    color: white;
+}
+.box button{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: 'muli' sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto;
+}
+.form{
+    background-color:#007cba;
+    justify-content: space-around;
+    border-radius: 3rem;
     padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    margin: auto;
 }
 
 /* ------------------------- */
@@ -114,10 +228,6 @@ footer{
 @media (min-width: 600px){  
     
     .box{
-        width: 40%;
-        height:30vh;
-        padding: 1rem;
-        text-align: center;
         
     }
     .logo {
@@ -130,10 +240,6 @@ footer{
 
 @media (min-width: 800px){  
 
-.box3, 
-.box4 {
-    display: block;  
-}
 .logo {
     font-size: 4rem; 
 }

@@ -4,28 +4,51 @@
 }
 
 body {
-    background: #8E2DE2;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    background-color:#007cba ;
     
     font-family: 'Mulish', sans-serif;
 
 }
 
-.header {
-
-    width: 100%;
-    height: 80px;
+/* ------------------------- */
+/* Encabezado */
+/* ------------------------- */
+.head{
+    color: white;
+    height: 120px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    
+}
+.head a{
+    color: white;
+    text-decoration: none;
+    min-width: 100px;
+
+}
+.home{
+    display: none;
+}
+.head__home img{
+    width: 50px;
+    margin-right: 20px;
+}
+@media (min-width: 350px){
+    .home{
+        display: flex;
+    }
 }
 
-/*insertar imagen de logo*/
-.header__img {
-    width: 200px;
-    margin-top: 10px;
-    /* margin-left: 10px; */
+.logo {
+    font-size: 2rem; 
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 
 .login{

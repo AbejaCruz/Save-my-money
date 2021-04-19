@@ -25,15 +25,22 @@ window.addEventListener('DOMContentLoaded', async (e) => {
         querySnapshop.forEach(doc => {
 
             expensesContainer.innerHTML += `
-            <div style="color:red">
-            <h3>${doc.data().type}</h3>
-                <p>
-                ${doc.data().value}
-                </p>
-                <p>${doc.data().date}</p>
+            <div class="result">
+                <div class="botones">
+                    <button class="btn-delete"  data-id="${doc.id}">delete</button>
+                    <button class="btn-edit" data-id="${doc.id}">edit</button>
                 </div>
-                <button class="btn-delete"  data-id="${doc.id}">delete</button>
-                <button class="btn-edit" data-id="${doc.id}">edit</button>
+                <div class="result__tablero">
+                    <div class="top">
+                        <h2>  - $ ${doc.data().value}</h2>
+                    </div>
+                    <div class="up">
+                        <span>Gasto de ${doc.data().type} | </span>
+                        <span>F: ${doc.data().date}</span>
+                    </div>
+                </div>
+            </div>
+                
               
             `
         })
@@ -76,15 +83,21 @@ window.addEventListener('DOMContentLoaded', async (e) => {
         querySnapshop.forEach(doc => {
 
             revenuesContainer.innerHTML += `
-         <div style="color:green">
-         <h3>${doc.data().type}</h3>
-             <p>
-             ${doc.data().value}
-             </p>
-             <p>${doc.data().date}</p>
-             </div>
-             <button class="btn-delete"  data-id="${doc.id}">delete</button>
-             <button class="btn-edit" data-id="${doc.id}">edit</button>
+            <div class="result ingresos">
+            <div class="botones">
+                <button class="btn-delete"  data-id="${doc.id}">delete</button>
+                <button class="btn-edit" data-id="${doc.id}">edit</button>
+            </div>
+            <div class="result__tablero">
+                <div class="top ingresos">
+                    <h2>  + $ ${doc.data().value}</h2>
+                </div>
+                <div class="up">
+                    <span>Ingreso de ${doc.data().type} | </span>
+                    <span>F: ${doc.data().date}</span>
+                </div>
+            </div>
+        </div>
            
          `
         })

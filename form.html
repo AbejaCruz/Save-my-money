@@ -13,6 +13,14 @@
         <a href="./index.html">
             <h1 class="logo">SaveMyMoney</h1>
         </a>
+
+        <div class="home">
+            <div class="head__home">
+                <a href="./index.html">
+                    <img src="https://img.icons8.com/android/24/ffffff/home.png"/>
+                </a>
+            </div>
+            
         <div class="header__menu">
             <div class="header__menu--perfil">
                 <img src="./assets/img/user.png" alt="">
@@ -28,16 +36,18 @@
     <main>
         <section class="login">
             <section class="login__container">
-                <form  class="login__container--form" id="form">
+                <form  class="login__container--form" id="form" name="formulario">
                 <label>
                     <input type="checkbox" name="check" id="cbox1" value="checkbox" onclick="onlyOne(this)">Gastos
+                    <span class="errorNombre" id="errorNombre"></span>
                     <input type="checkbox" name="check" id="cbox2" value="checkbox" onclick="onlyOne(this)">Ingresos
                 </label>
                 
-                    <input type="number" id="value" style="color: white"  class="input" placeholder="$ Valor">
+                    <input type="number" id="value" name="value" style="color: white"  class="input" placeholder="$ Valor">
                     <input type="text" id="type" style="color: white"  class="input" placeholder="Tipo">
-                    <input type="date" id="date" class="input" style="color: white"  placeholder="Fecha">
-                    <button class="button" name="boton" disabled>Guardar</button>  
+                    <input type="date" id="date" class="input" style="color: white" value="2021-04-18" placeholder="Fecha">
+                    
+                    <button class="button" type="submit" name="boton" disabled>Guardar</button>  
                 </form>
             </section>
          </section>

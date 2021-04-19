@@ -29,7 +29,14 @@ const saveRevenue = (value, type, date) =>
  
   })
 
-
+  /* function validarForm (value,type,date){
+    if((value.value === null || value.value === '') && (type.value === null || type.value === '') ){
+      alert('No puede nhaber campos vacios')
+    }else{
+      return true;
+    }
+     */
+/* var value= document.getElementById('value') */
 form.addEventListener("submit", async (e) => {
   e.preventDefault()
 
@@ -39,21 +46,25 @@ form.addEventListener("submit", async (e) => {
  
 
   try {
-    if (document.getElementById('cbox1').checked) {
-      alert('Gastos Guardados')
-      await saveExpenses(value.value, type.value, date.value)
-      
+    if((value.value === null || value.value === '') || (type.value === null || type.value === '') ){
+      alert('El campo valor y tipo no deben estar vacios')
+    }else{
+      if (document.getElementById('cbox1').checked) {
+        alert('Gastos Guardados')
+        await saveExpenses(value.value, type.value, date.value)
+        
+      }
+      if (document.getElementById('cbox2').checked) {
+        alert('Ingresos Guardados')
+        await saveRevenue(value.value, type.value, date.value)
+      }
+      form.reset()
+      form.boton.disabled = true
+      value.focus()
     }
-    if (document.getElementById('cbox2').checked) {
-      alert('Ingresos Guardados')
-      await saveRevenue(value.value, type.value, date.value)
-    }
-    form.reset()
-    form.boton.disabled = true
-    value.focus()
+    
   } catch (error) {
     console.log(error)
   }
 })
-
 

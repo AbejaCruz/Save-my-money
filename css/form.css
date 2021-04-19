@@ -35,6 +35,18 @@ main{
     min-width: 100px;
 
 }
+.home{
+    display: none;
+}
+.head__home img{
+    width: 50px;
+    margin-right: 20px;
+}
+@media (min-width: 350px){
+    .home{
+        display: flex;
+    }
+}
 
 .logo {
     font-size: 2rem; 
