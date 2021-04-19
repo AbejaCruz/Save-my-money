@@ -8,10 +8,10 @@ HTML, Js Vanilla y CSS Puro.
 
 # Deploy
 
-The project is displayed  [https://abejacruz.github.io/Save-my-money/index.html](Here).
+The project is displayed [Here](https://abejacruz.github.io/Save-my-money/index.html).
 
 # Flowchart
-You can see the flow chart here.
+You can see the flow chart [Here](https://raw.githubusercontent.com/AbejaCruz/Save-my-money/main/diagram/Save_My_Money.jpg).
 
 # Team 
 
