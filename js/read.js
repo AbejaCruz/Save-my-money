@@ -10,13 +10,13 @@ const getExpenses = () => db.collection('expenses').get()
 const onGetExpenses = (callback) => db.collection('expenses').onSnapshot(callback)
 const deleteExpenses = (id) => db.collection("expenses").doc(id).delete()
 const getExpense = (id) => db.collection("expenses").doc(id).get()
-const updateExpense = (id, updatedExpense) => db.collection("expenses").doc(id).update(updatedExpense);
+const updateExpense = (id, updatedExpense) => db.collection("expenses").doc(id).update(updatedExpense)
 
 const getRevenues = () => db.collection('revenues').get()
 const onGetRevenues = (callback) => db.collection('revenues').onSnapshot(callback)
 const deleteRevenues = (id) => db.collection("revenues").doc(id).delete()
 const getRevenue = (id) => db.collection("revenues").doc(id).get()
-const updateRevenue = (id, updateRevenue) => db.collection("revenues").doc(id).update(updateRevenue);
+const updateRevenue = (id, updateRevenue) => db.collection("revenues").doc(id).update(updateRevenue)
 
 window.addEventListener('DOMContentLoaded', async (e) => {
 

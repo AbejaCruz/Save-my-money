@@ -33,7 +33,7 @@ const saveRevenue = (value, type, date) =>
     if((value.value === null || value.value === '') && (type.value === null || type.value === '') ){
       alert('No puede nhaber campos vacios')
     }else{
-      return true;
+      return true
     }
      */
 /* var value= document.getElementById('value') */
